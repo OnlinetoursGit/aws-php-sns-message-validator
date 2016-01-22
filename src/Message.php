@@ -6,7 +6,7 @@ namespace Aws\Sns;
  */
 class Message implements \ArrayAccess, \IteratorAggregate
 {
-    private static $requiredKeys = [
+    private static $requiredKeys = array(
         'Message',
         'MessageId',
         'Timestamp',
@@ -15,7 +15,7 @@ class Message implements \ArrayAccess, \IteratorAggregate
         'Signature',
         'SigningCertURL',
         'SignatureVersion',
-    ];
+    );
 
     /** @var array The message data */
     private $data;
@@ -57,7 +57,7 @@ class Message implements \ArrayAccess, \IteratorAggregate
         if ($data['Type'] === 'SubscriptionConfirmation'
             || $data['Type'] === 'UnsubscribeConfirmation'
         ) {
-            $this->validateRequiredKeys($data, ['SubscribeURL', 'Token']);
+            $this->validateRequiredKeys($data, array('SubscribeURL', 'Token'));
         }
 
         $this->data = $data;

@@ -16,7 +16,7 @@
         "issues": "https://github.com/aws/aws-sns-message-validator/issues"
     },
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.3",
         "ext-openssl": "*"
     },
     "require-dev": {

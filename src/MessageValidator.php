@@ -105,7 +105,7 @@ class MessageValidator
      */
     public function getStringToSign(Message $message)
     {
-        static $signableKeys = [
+        static $signableKeys = array(
             'Message',
             'MessageId',
             'Subject',
@@ -114,7 +114,7 @@ class MessageValidator
             'Token',
             'TopicArn',
             'Type',
-        ];
+        );
 
         if ($message['SignatureVersion'] !== self::SIGNATURE_VERSION_1) {
             throw new InvalidSnsMessageException(
